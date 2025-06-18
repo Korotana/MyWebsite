@@ -23,6 +23,26 @@ export default function App() {
     return () => sections.forEach(section => observer.unobserve(section));
   }, []);
 
+
+useEffect(() => {
+  const navbar = document.querySelector(".navbar");
+
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
+      navbar?.classList.add("scrolled");
+    } else {
+      navbar?.classList.remove("scrolled");
+    }
+  };
+
+  // Trigger on load too (in case you reload mid-scroll)
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
   return (
     <div className="dark-dashboard">
       {/* Floating Image */}
@@ -30,25 +50,27 @@ export default function App() {
         <img src={coderImage} alt="Coder Illustration" className="floating-img" />
       </div>
 
-      {/* Centered Name and Nav */}
-      <header className="navbar centered-nav">
-        <div className="logo drop-animated">Yuvraj Korotana – Software Developer</div>
-        <nav>
-          <ul>
-            {['about', 'skills', 'projects', 'research', 'experience', 'contact'].map((section, i) => (
-              <li key={section}>
-                <a
-                  href={`#${section}`}
-                  className={`drop-animated ${activeSection === section ? 'active' : ''}`}
-                  style={{ animationDelay: `${0.3 + i * 0.15}s` }}
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
+<header className="navbar centered-nav">
+  <div className="navbar-inner">
+    <div className="logo drop-animated">Yuvraj Korotana – Software Developer</div>
+    <nav>
+      <ul>
+        {['about', 'skills', 'projects', 'research', 'experience', 'contact'].map((section, i) => (
+          <li key={section}>
+            <a
+              href={`#${section}`}
+              className={`drop-animated ${activeSection === section ? 'active' : ''}`}
+              style={{ animationDelay: `${0.3 + i * 0.15}s` }}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
       {/* Hero Section */}
       <section className="hero-section" id="home">

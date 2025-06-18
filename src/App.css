@@ -5,7 +5,7 @@ html, body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background: #0d0d0d;
   color: #f0f0f0;
-  height: 100%;
+  min-height: 100%;
   overflow-x: hidden;
 }
 
@@ -16,11 +16,11 @@ html, body {
 
 /* Scrolling background image */
 .floating-bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
@@ -28,11 +28,11 @@ html, body {
 
 .floating-img {
   width: 100%;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
   animation: float 8s ease-in-out infinite;
   opacity: 0.15;
-  position: relative;
+  position: absolute;
 }
 
 @keyframes float {
@@ -59,18 +59,36 @@ html, body {
 
 /* Centered Nav Layout */
 .navbar {
-  position: sticky;
+  position: fixed; /* <-- was sticky */
   top: 0;
   z-index: 999;
-  padding: 1rem 0;
+  width: 100%;
   text-align: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
 }
 
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.navbar.scrolled .navbar-inner {
+  background: transparent;
+  backdrop-filter: none;
+  transition: background 0.6s ease, backdrop-filter 0.6s ease;
+}
+
+.navbar-inner {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  margin: 0 auto;
+  max-width: 960px;
+  border-radius: 12px;
+  padding: 1rem;
+  height: auto;
+  transition: background 0.6s ease, backdrop-filter 0.6s ease;
 }
 
 .navbar .logo {
