@@ -71,13 +71,13 @@ html, body {
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
-
 }
 
+/* Scrolled state — slides down */
 .navbar.scrolled .navbar-inner {
+  margin: 1rem auto; /* or try 0.75rem for smaller shift */
   background: transparent;
   backdrop-filter: none;
-  transition: background 0.6s ease, backdrop-filter 0.6s ease;
 }
 
 .navbar-inner {
@@ -89,6 +89,11 @@ html, body {
   padding: 1rem;
   height: auto;
   transition: background 0.6s ease, backdrop-filter 0.6s ease;
+}
+
+.navbar-inner,
+.navbar.scrolled .navbar-inner {
+  transition: margin-top 0.4s ease, background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
 .navbar .logo {
