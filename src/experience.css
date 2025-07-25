@@ -1,0 +1,36 @@
+/* src/experience.css */
+
+.experience-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.experience-card h3 {
+  margin-bottom: 0.5rem;
+  color: #66b3ff;
+}
+
+.experience-duration {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.75rem;
+}
+
+.experience-card ul {
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.experience-card ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}

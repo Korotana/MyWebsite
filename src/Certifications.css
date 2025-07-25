@@ -1,0 +1,63 @@
+#certifications {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 3;
+  position: relative;
+}
+
+.cert-slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  height: 220px;
+}
+
+.cert-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  animation: scroll-loop 40s linear infinite;
+}
+
+.cert-image {
+  height: 180px;
+  margin-right: 1.5rem;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 5px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.cert-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.cert-slider:hover .cert-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .cert-image {
+    height: 130px;
+    margin-right: 1rem;
+  }
+
+  .cert-slider {
+    height: 160px;
+  }
+}

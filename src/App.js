@@ -3,6 +3,12 @@ import "./App.css";
 import { motion } from "framer-motion";
 import { FiMail, FiGithub, FiLinkedin, FiCode } from "react-icons/fi";
 import coderImage from "./Coder.png"; // Make sure Coder.png is in src/ or public folder
+import ProjectCarousel from './ProjectCarousel';
+import ExperienceCards from "./ExperienceCards";
+import CertificationsSection from './Certifications';
+
+
+
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('');
@@ -55,7 +61,7 @@ useEffect(() => {
     <div className="logo drop-animated">Yuvraj Korotana – Software Developer</div>
     <nav>
       <ul>
-        {['about', 'skills', 'projects', 'research', 'experience', 'contact'].map((section, i) => (
+        {['skills', 'projects', 'research', 'experience', 'contact'].map((section, i) => (
           <li key={section}>
             <a
               href={`#${section}`}
@@ -81,7 +87,7 @@ useEffect(() => {
           transition={{ duration: 1 }}
         >
           <h1>Welcome to My Portfolio</h1>
-          <p>Explore my projects, research & skills</p>
+          <p>Explore my projects, Certifications, research and skills</p>
         </motion.div>
 
         <div className="drop-icons white-box-row">
@@ -106,29 +112,37 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* Resume Sections */}
-      <section className="content-section" id="about">
-        <h2>About Me</h2>
-        <p>Computer Science graduate from the University of Saskatchewan. Passionate about full-stack development and open-source research.</p>
-      </section>
+      {/*/!* Resume Sections *!/*/}
+      {/*<section className="content-section" id="about">*/}
+      {/*  <h2>About Me</h2>*/}
+      {/*  <p>Computer Science graduate from the University of Saskatchewan. Passionate about Software Development.</p>*/}
+      {/*</section>*/}
 
-      <section className="content-section" id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>Frontend: HTML, CSS, React, Selenium</li>
-          <li>Backend: Python, Django, Node.js</li>
-          <li>DevOps: Docker, Git, Firebase, GCP</li>
-        </ul>
-      </section>
+<section className="content-section" id="skills">
+  <h2>Skills</h2>
+  <div className="skills-grid">
+    <div className="skill-card">
+      <h3>Frontend</h3>
+      <p>HTML, CSS, React, Selenium</p>
+    </div>
+    <div className="skill-card">
+      <h3>Backend</h3>
+      <p>Python, Django, Node.js</p>
+    </div>
+    <div className="skill-card">
+      <h3>DevOps</h3>
+      <p>Docker, Git, Firebase, GCP</p>
+    </div>
+  </div>
+</section>
 
-      <section className="content-section" id="projects">
-        <h2>Projects</h2>
-        <p>Coming soon...</p>
-      </section>
 
-      <section className="content-section" id="research">
-        <h2>Research</h2>
-        <p>Coming soon...</p>
+<ProjectCarousel />
+<ExperienceCards />
+
+      <section className="content-section" id="certifications">
+        <h2>Certifications</h2>
+        <CertificationsSection />
       </section>
 
       <section className="content-section" id="experience">

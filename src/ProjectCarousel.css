@@ -1,0 +1,32 @@
+.project-carousel {
+  padding: 2rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.project-card h4 {
+  color: #fff;
+  font-size: 1.1rem;
+}
