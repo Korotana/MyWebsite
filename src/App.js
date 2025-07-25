@@ -7,6 +7,8 @@ import ProjectCarousel from './ProjectCarousel';
 import ExperienceCards from "./ExperienceCards";
 import CertificationsSection from './Certifications';
 import ContactForm from "./ContactForm";
+import PdfViewer from './PdfViewer';
+
 
 
 
@@ -151,10 +153,11 @@ useEffect(() => {
         <CertificationsSection />
       </section>
 
-      <section className="content-section" id="experience">
-        <h2>Experience</h2>
-        <p>Coming soon...</p>
+      <section className="content-section" id="pdf">
+        <h2>Research Report</h2>
+        <PdfViewer />
       </section>
+
 
       <section className="content-section" id="contact">
         <h2>Contact</h2>
