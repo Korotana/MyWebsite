@@ -11,14 +11,14 @@ import pythondjango from  './images/Certifications/PythonDjango.jpg'
 import sql from './images/Certifications/sql.png'
 
 const certificateImages = [
-  Mern,
-  Nodejs,
-  ReactCert,
-  RestApi,
-  problemsolving,
-  testindebugging,
-  sql,
-  pythondjango,
+  { src: Mern, label: 'MERN Full Stack Developer' },
+  { src: Nodejs, label: 'Node.js Developer' },
+  { src: ReactCert, label: 'Frontend Developer (React)' },
+  { src: RestApi, label: 'REST API (Intermediate)' },
+  { src: problemsolving, label: 'Problem Solving (Intermediate)' },
+  { src: testindebugging, label: 'Testing & Debugging' },
+  { src: sql, label: 'Advanced SQL' },
+  { src: pythondjango, label: 'Python & Django' }
 ];
 
 export default function CertificationsSection() {
@@ -35,17 +35,19 @@ const handleImageClick = (e) => {
 
   return (
     <div className="cert-slider">
-      <div className="cert-track">
-        {[...certificateImages, ...certificateImages].map((src, idx) => (
-          <img
-            key={idx}
-            src={src}
-            alt={`Certificate ${idx + 1}`}
-            className="cert-image"
-            onClick={handleImageClick}
-          />
-        ))}
+  <div className="cert-track">
+    {[...certificateImages, ...certificateImages].map((item, idx) => (
+      <div className="cert-item" key={idx}>
+        <img
+          src={item.src}
+          alt={item.label}
+          className="cert-image"
+          onClick={handleImageClick}
+        />
+        <p className="cert-label">{item.label}</p>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
   );
 }
