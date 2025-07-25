@@ -9,13 +9,13 @@ import 'swiper/css/navigation';
 const projects = [
   // { title: 'Reddit Sentiment Analyzer', img: require('..') },
   // { title: 'E-Commerce Web App', img: require('../assets/project2.png') },
-  { title: 'Analysing Pull Request Acceptance Rate', img: require('./images/AnalysePR.png') },
-  { title: 'DSA Practice', img: require('./images/Dsa.png') },
-  { title: 'Graphical Editor', img: require('./images/targetpractice.png') },
-  { title: 'Full Featured E-Commerce App', img: require('./images/Ecommerce.jpeg') },
-  { title: 'Huddle - Full Stack App', img: require('./images/Huddle.png') },
-  { title: 'Social Media Site', img: require('./images/Huddle.png') },
-  // { title: 'System Health Tool', img: require('../assets/project4.png') },
+  { title: 'Analysing Pull Request Acceptance Rate(Git, Python, FastAPI)', img: require('./images/GitProjects/AnalysePR.png') },
+  { title: 'DSA Practice(Python, Java, Bit Manipulation)', img: require('./images/GitProjects/Dsa.png') },
+  { title: 'Graphical Editor(Java)', img: require('./images/GitProjects/targetpractice.png') },
+  { title: 'Full Featured E-Commerce App(MERN)', img: require('./images/GitProjects/Ecommerce.jpeg') },
+  { title: 'Huddle - Full Stack Android App(Java, Firebase)', img: require('./images/GitProjects/Huddle.png') },
+  { title: 'Social Media Site(Python, Django)', img: require('./images/GitProjects/Huddle.png') },
+  { title: 'Windows 11 System Health Tool(Command Line)', img: require('./images/GitProjects/Powershell.png') },
 ];
 
 const ProjectCarousel = () => {

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import './Certifications.css';
 
 import Mern from './images/Certifications/Mern.jpg';
@@ -9,6 +9,7 @@ import testindebugging from './images/Certifications/testingdebugging.jpg';
 import problemsolving from './images/Certifications/ProblemSolving.png';
 import pythondjango from  './images/Certifications/PythonDjango.jpg'
 import sql from './images/Certifications/sql.png'
+import java from './images/Certifications/JavaSpringboot.png'
 
 const certificateImages = [
   { src: Mern, label: 'MERN Full Stack Developer' },
@@ -18,7 +19,8 @@ const certificateImages = [
   { src: problemsolving, label: 'Problem Solving (Intermediate)' },
   { src: testindebugging, label: 'Testing & Debugging' },
   { src: sql, label: 'Advanced SQL' },
-  { src: pythondjango, label: 'Python & Django' }
+  { src: pythondjango, label: 'Python & Django' },
+  { src: java, label: 'Java Springboot Full Stack Developer'}
 ];
 
 export default function CertificationsSection() {

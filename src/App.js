@@ -6,6 +6,8 @@ import coderImage from "./Coder.png"; // Make sure Coder.png is in src/ or publi
 import ProjectCarousel from './ProjectCarousel';
 import ExperienceCards from "./ExperienceCards";
 import CertificationsSection from './Certifications';
+import ContactForm from "./ContactForm";
+
 
 
 
@@ -87,7 +89,7 @@ useEffect(() => {
           transition={{ duration: 1 }}
         >
           <h1>Welcome to My Portfolio</h1>
-          <p>Explore my projects, Certifications, research and skills</p>
+          <p>Explore my Work Experience, Projects, Certifications, and Skills</p>
         </motion.div>
 
         <div className="drop-icons white-box-row">
@@ -123,15 +125,19 @@ useEffect(() => {
   <div className="skills-grid">
     <div className="skill-card">
       <h3>Frontend</h3>
-      <p>HTML, CSS, React, Selenium</p>
+      <p>HTML5, CSS/SCSS, Bootstrap, JavaScript(ES6+), JQuery, Typescript, Reactjs, Selenium</p>
     </div>
     <div className="skill-card">
       <h3>Backend</h3>
-      <p>Python, Django, Node.js</p>
+      <p>Python, Java, Nodejs, Express, Django, MongoDB, MySQL, Firebase, Google Cloud, SQL, AWS(Basic), SSH</p>
     </div>
     <div className="skill-card">
-      <h3>DevOps</h3>
-      <p>Docker, Git, Firebase, GCP</p>
+      <h3>Systems and Tools</h3>
+      <p>Git, Postman, Docker, JIRA, Confluence, Figma, Balsamiq, Canva, PyCharm, Intellij, VS Code</p>
+    </div>
+    <div className="skill-card">
+      <h3>Testing</h3>
+      <p>Client Side Testing, Unit Tests, Integration Tests, Validation Tests, Functional Tests</p>
     </div>
   </div>
 </section>
@@ -152,7 +158,7 @@ useEffect(() => {
 
       <section className="content-section" id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:yvk110@usask.ca">yvk110@usask.ca</a></p>
+        <ContactForm />
       </section>
     </div>
   );
