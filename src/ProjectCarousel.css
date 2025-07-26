@@ -30,3 +30,95 @@
   color: #fff;
   font-size: 1.1rem;
 }
+
+/* Remove default link styling from the entire card link */
+.project-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits text color from parent, so h4 color remains */
+  display: block; /* Makes the entire link act as a block element to fill the card */
+  /* Add any other styling needed to ensure the link doesn't break your card layout */
+}
+
+/* Swiper Pagination Dots Styling (Override Swiper's CSS variables) */
+.swiper-pagination-bullet {
+  --swiper-pagination-color: #ffffff; /* Sets the color for the active bullet */
+  --swiper-pagination-bullet-inactive-color: #ffffff; /* Sets the color for inactive bullets */
+  --swiper-pagination-bullet-inactive-opacity: 0.5; /* Sets opacity for inactive bullets */
+
+  /* You can also explicitly set background-color as a fallback or if variables don't work */
+  background-color: #ffffff; /* Fallback for inactive dots */
+  opacity: 0.5; /* Fallback opacity for inactive dots */
+}
+
+.swiper-pagination-bullet-active {
+  /* No need to set background-color here if --swiper-pagination-color is used */
+  background-color: #ffffff; /* Fallback for active dot */
+  opacity: 1; /* Fallback opacity for active dot */
+}
+
+/* Optional: Adjust size or other properties if desired */
+.swiper-pagination-bullet {
+  width: 10px; /* Example size */
+  height: 10px; /* Example size */
+  margin: 0 5px !important; /* Adjust spacing between dots - !important might be needed */
+}
+
+
+/* Existing styles for .project-carousel, .project-card, pagination dots, etc. */
+
+/* Swiper Navigation Arrows Styling */
+
+/* Override Swiper's CSS variables for arrow color */
+.swiper-button-next,
+.swiper-button-prev {
+  --swiper-navigation-color: #7fbfff; /* Sets the color of the arrow icon itself to white */
+}
+
+/* Base styles for the arrow containers */
+.swiper-button-next,
+.swiper-button-prev {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent white background */
+  border-radius: 10%; /* Make them perfectly round */
+  backdrop-filter: blur(5px); /* Apply a blur effect if supported, matches card blur */
+  display: flex; /* Use flexbox to center the icon */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  /* Adjust position if needed, default is usually fine */
+}
+
+/* Positioning adjustments (optional, if they are too far/close) */
+.swiper-button-prev {
+  left: 10px; /* Example: push it slightly more inwards from the left */
+}
+
+.swiper-button-next {
+  right: 10px; /* Example: push it slightly more inwards from the right */
+}
+
+/* Hover effect */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* More opaque on hover */
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Disabled state (when there's no next/prev slide) */
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.3; /* Make them more faded when disabled */
+  cursor: not-allowed;
+  pointer-events: auto; /* Allow pointer events to show disabled cursor */
+}
+
+/* If you want to use custom icons (more advanced) */
+/* .swiper-button-next::after,
+.swiper-button-prev::after {
+  content: ''; // Clear default Swiper icon
+  // Then use background-image to set your SVG icon
+  // background-image: url('path/to/your/custom-arrow-right.svg');
+  // background-size: contain;
+  // width: 24px; // Adjust to icon size
+  // height: 24px;
+} */

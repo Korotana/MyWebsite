@@ -153,8 +153,8 @@ useEffect(() => {
         <CertificationsSection />
       </section>
 
-      <section className="content-section" id="pdf">
-        <h2>Research Report</h2>
+      <section className="content-section" id="research">
+        <h2>Analysing Pull Request Acceptance Rate</h2>
         <PdfViewer />
       </section>
 
