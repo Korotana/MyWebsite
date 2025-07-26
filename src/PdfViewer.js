@@ -10,13 +10,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // Set the worker source
-pdfjs.GlobalWorkerOptions.workerSrc = `/pdf_workers/pdf.worker.min.mjs`; // Adjust if .js
+pdfjs.GlobalWorkerOptions.workerSrc = process.env.PUBLIC_URL + '/pdf_workers/pdf.worker.min.mjs';
 
 export default function PdfViewer() {
   const [numPages, setNumPages] = React.useState(null);
   const [swiperInstance, setSwiperInstance] = React.useState(null); // To control Swiper externally
-  const researchpdf = '/pdfs/AnalysingPRAcceptanceRate.pdf';
-
+  const researchpdf = process.env.PUBLIC_URL + '/pdfs/AnalysingPRAcceptanceRate.pdf';
   const onLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
     // If you need to reset Swiper to page 1 here, you'd use swiperInstance.slideTo(0);
@@ -65,7 +64,7 @@ export default function PdfViewer() {
 
       {/* Download Button (Keep if needed) */}
       <a
-        href="./AnalysingPRAcceptanceRate.pdf"
+        href={process.env.PUBLIC_URL + "/pdfs/AnalysingPRAcceptanceRate.pdf"}
         download="PR_Acceptance_Analysis.pdf"
         className="download-btn"
       >
