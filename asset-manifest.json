@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/MyWebsite/static/css/main.e49849a1.css",
+    "main.js": "/MyWebsite/static/js/main.b3835dc8.js",
+    "static/js/453.e24f41c0.chunk.js": "/MyWebsite/static/js/453.e24f41c0.chunk.js",
+    "static/media/Coder.png": "/MyWebsite/static/media/Coder.8aa12b9f30e09fe49439.png",
+    "static/media/Ecommerce.jpeg": "/MyWebsite/static/media/Ecommerce.5a0add209e67ccd689eb.jpeg",
+    "static/media/ProblemSolving.png": "/MyWebsite/static/media/ProblemSolving.08bb65ea7ebd084a25b1.png",
+    "static/media/React.png": "/MyWebsite/static/media/React.c931d8f331a09b1bc32a.png",
+    "static/media/RestApi.png": "/MyWebsite/static/media/RestApi.fd439a813a319dc4f3fb.png",
+    "static/media/Nodejs.png": "/MyWebsite/static/media/Nodejs.fbf06048110918690d4c.png",
+    "static/media/sql.png": "/MyWebsite/static/media/sql.67a703e072faade19aa1.png",
+    "static/media/testingdebugging.jpg": "/MyWebsite/static/media/testingdebugging.4aa9b277af8937a59131.jpg",
+    "static/media/Mern.jpg": "/MyWebsite/static/media/Mern.111891485d4734bae27c.jpg",
+    "static/media/PythonDjango.jpg": "/MyWebsite/static/media/PythonDjango.bd3a73452b79493e74c2.jpg",
+    "static/media/Huddle.png": "/MyWebsite/static/media/Huddle.c56f7bf6ea47b7613179.png",
+    "static/media/SocialMedia.jpeg": "/MyWebsite/static/media/SocialMedia.e924ceae04ac8d77d5f7.jpeg",
+    "static/media/AnalysePR.png": "/MyWebsite/static/media/AnalysePR.87009e70b6dffa6a4f1e.png",
+    "static/media/JavaSpringboot.png": "/MyWebsite/static/media/JavaSpringboot.ceac9227fa6207c72f55.png",
+    "static/media/Dsa.png": "/MyWebsite/static/media/Dsa.da82fc20d2baf1e893cd.png",
+    "static/media/targetpractice.png": "/MyWebsite/static/media/targetpractice.ec56e961b965fa4bf696.png",
+    "static/media/Powershell.png": "/MyWebsite/static/media/Powershell.8e623d28d5979e1ec7d7.png",
+    "index.html": "/MyWebsite/index.html",
+    "main.e49849a1.css.map": "/MyWebsite/static/css/main.e49849a1.css.map",
+    "main.b3835dc8.js.map": "/MyWebsite/static/js/main.b3835dc8.js.map",
+    "453.e24f41c0.chunk.js.map": "/MyWebsite/static/js/453.e24f41c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e49849a1.css",
+    "static/js/main.b3835dc8.js"
+  ]
+}
